@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#gameCanvas {
+    border: 1px solid #000;
+}
+
+.side-panel {
+    margin-left: 20px;
+    text-align: left;
+}
+
+#helpIcon {
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 400px;
+    border: 1px solid #888;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}

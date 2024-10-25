@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tetris Game</h1>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="200" height="400"></canvas>
+        <div class="side-panel">
+            <button id="startButton">Start Game</button>
+            <button id="pauseButton">Pause Game</button>
+            <div id="helpIcon">?</div>
+            <div id="helpModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Controls</h2>
+                    <ul>
+                        <li><strong>Left Arrow</strong>: Move block left</li>
+                        <li><strong>Right Arrow</strong>: Move block right</li>
+                        <li><strong>Up Arrow</strong>: Rotate block</li>
+                        <li><strong>Down Arrow</strong>: Speed up block</li>
+                        <li><strong>Spacebar</strong>: Drop block</li>
+                        <li><strong>P</strong>: Pause/Unpause game</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
