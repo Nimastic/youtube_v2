@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipping Card Example</title>
+    <style>
+        /* Basic reset and body styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Section styling */
+        #Projects {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #Projects h2 {
+            margin-bottom: 30px;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Card container */
+        .project-card {
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        /* This element will be flipped */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Hover effect to bump up the card */
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Flip the card when clicked */
+        .project-card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Style for both sides of the card */
+        .card-side {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Front side of the card */
+        .card-front {
+            background-color: #002E5D;
+            color: #F5F5F5;
+        }
+
+        /* Back side of the card */
+        .card-back {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            transform: rotateY(180deg);
+        }
+
+        /* Content styling */
+        .project-card img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 20px;
+            color: #ffa600;
+            margin-bottom: 10px;
+        }
+
+        .project-card h4 {
+            font-size: 14px;
+            color: #ffa600;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #ffa600;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffa600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .back-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section id="Projects">
+        <h2>My Projects</h2>
+            <div class="project-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-side card-front">
+                        <img src="gemini.png" alt="Smart Personal Assistant">
+                        <h3>Smart Personal Assistant (SPA)</h3>
+                        <h4>NUS Orbital Software Development Project 2023 | Intermediate Certification</h4>
+                        <p>Productivity app with machine learning features using TensorFlowLite for task suggestions</p>
+                    </div>
+                    <div class="card-side card-back">
+                        <div class="back-content">
+                            <h3>Project Details</h3>
+                            <p>Additional details about the Smart Personal Assistant project...</p>
+                            <a href="[project-link]" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-side card-front">
+                        <img src="gemini.png" alt="Smart Personal Assistant">
+                        <h3>Smart Personal Assistant (SPA)</h3>
+                        <h4>NUS Orbital Software Development Project 2023 | Intermediate Certification</h4>
+                        <p>Productivity app with machine learning features using TensorFlowLite for task suggestions</p>
+                    </div>
+                    <div class="card-side card-back">
+                        <div class="back-content">
+                            <h3>Project Details</h3>
+                            <p>Additional details about the Smart Personal Assistant project...</p>
+                            <a href="[project-link]" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-side card-front">
+                        <img src="gemini.png" alt="Smart Personal Assistant">
+                        <h3>Smart Personal Assistant (SPA)</h3>
+                        <h4>NUS Orbital Software Development Project 2023 | Intermediate Certification</h4>
+                        <p>Productivity app with machine learning features using TensorFlowLite for task suggestions</p>
+                    </div>
+                    <div class="card-side card-back">
+                        <div class="back-content">
+                            <h3>Project Details</h3>
+                            <p>Additional details about the Smart Personal Assistant project...</p>
+                            <a href="[project-link]" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+</html>
